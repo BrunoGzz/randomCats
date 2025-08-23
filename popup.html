@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just random & cute cats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+<body style="width: 400px;height: 300px;">
+    <header class="border-bottom p-2">
+        <h3 class="kanit m-0 p-0 d-inline">🐈 RandomCats 🐈</h3>
+        <div class="stats d-inline position-absolute">
+            <button class="menu-button me-1" id="menu-cat">🐱</button>
+            <button class="menu-button me-3" id="menu-puzzle">🧩</button>
+            <span>👁️ <span id="viewed_cats" style="font-family: Kanit"></span></span>
+        </div>
+    </header>
+    <div class="cats" id="cats">
+
+    </div>
+    <div class="vote-stars" id="vote-stars">
+        ¿Te está gustando nuestra extensión?<br>
+        <a href="https://chrome.google.com/webstore/detail/randomcats-just-random-ph/cfjpjbokkcbghmdieflchhklaldlhfkm">Déjanos una reseña en Google 🐈</a>
+        <span class="d-block my-2">⭐️⭐️⭐️⭐️⭐️</span>
+        <button class="btn btn-primary w-75 mx-3" id="close-vote-button">
+            Ahora no puedo
+        </button>
+    </div>
+    <div id="cats-info">
+        <div class="d-block emojis-pad text-center w-100 position-absolute">
+            <button class="emoji-button h5 m-0" id="emoji1">
+                😸
+            </button>
+            <button class="emoji-button h5 m-0" id="emoji2">
+                😻
+            </button>
+            <button class="emoji-button h5 m-0" id="emoji3">
+                😹
+            </button>
+            <button class="emoji-button h5 m-0" id="emoji4">
+                🙀
+            </button>
+            <button class="emoji-button h5 m-0" id="emoji5">
+                ⭐️
+            </button>
+        </div>
+        <button class="btn-primary btn w-100 position-absolute bottom-0 rounded-0" id="next">
+            Next Cat
+        </button>
+    </div>
+    <div id="puzzle-game">
+        <div class="text-center">
+            <h3 class="title-puzzle my-2 mb-4 mx-5">Puzzle 😸</h3>
+        </div>
+        <!--div class="options text-center">
+            <select id="difficulty" class="mt-2 mb-2">
+                <option value="3">Easy 😸</option>
+                <option value="4">Medium 😼</option>
+                <option value="5">Hard 😾</option>
+            </select>
+        </div-->
+        <div class="puzzle-container">
+            <div id="loader-container">
+                <div class="loader"></div>
+            </div>
+            <div id="puzzle"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

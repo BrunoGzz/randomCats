@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('kanit.woff2') format('woff2');
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.cats{
+    height: 100%;
+}
+
+.kanit{
+    font-family: 'Kanit';
+}
+
+#next{
+    background: #408fec60;
+    backdrop-filter: blur(5px);
+    border:none;
+    transition: .5s;
+    text-shadow: #00000031 2px;
+}
+
+.emojis-pad{
+    left: 0;
+    right: 0;
+    border-radius: 16px;
+    width: fit-content;
+    margin-top: -70px;
+}
+
+.emoji-button{
+    border: none;
+    background: transparent;
+    outline: none;
+    border-radius: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition: 0.3s;
+}
+
+.emoji-button:hover{
+    background-color: #e3e0e091;
+}
+
+.emoji-button:disabled{
+    filter: grayscale();
+}
+
+
+.stats{
+    right: 15px;
+}
+
+.fade-out{
+    opacity: 0;
+    transform: scale(5) rotate(30deg);
+    -moz-transform: scale(5) rotate(30deg);
+    -webkit-transform: scale(5) rotate(30deg);
+    -o-transform: scale(5) rotate(30deg);
+}
+
+.menu-button{
+    border: 1px solid #b2b2b2;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 16px;
+}
+
+#difficulty{
+    width: 80%;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #2c2c2c;
+    font-family: 'Kanit';
+    font-size: 18px;
+}
+
+.puzzle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cambiar el número según el nivel de dificultad */
+    width: 200px; /* Cambiar según el nivel de dificultad */
+    height: 200px; /* Cambiar según el nivel de dificultad */
+}
+
+.title-puzzle{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #2c2c2c;
+    font-family: 'Kanit';
+    font-size: 18px;
+}
+
+.vote-stars{
+    position: absolute;
+    background: white;
+    border-radius: 16px;
+    width: 75%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+    transition: .3s;
+}
+
+.puzzle-piece {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Agregar una transición de transformación */
+}
+
+.piece-number {
+    text-align: center;
+    margin-top: -50px;
+    font-size: 24px;
+    color: #ffffff5c;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Estilos para la pantalla de carga */
+#loader-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Colocar por encima de otros elementos */
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.active-piece {
+    border: 2px solid red;
+}
